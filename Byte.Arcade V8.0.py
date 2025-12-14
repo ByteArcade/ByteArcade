@@ -250,6 +250,4 @@ def upload_saves():
     with open("sauvegardes.json", "w") as file:
         json.dump(data, file, indent=4)
 
-download_saves()
-print(data)
-upload_saves()
+        
