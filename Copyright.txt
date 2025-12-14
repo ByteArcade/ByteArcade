@@ -1,0 +1,39 @@
+# ===============================================================
+#                  © 2025 Byte.Games Studios                   
+# ===============================================================
+# Titre du jeu : Byte.Arcade
+# Développé par : Byte.Games Studios
+# Auteur principal : Lou.T
+# Contact : byte.arcadestudios.dev@gmail.com
+# ---------------------------------------------------------------
+# Tous droits réservés. Ce jeu et son contenu, incluant mais ne
+# se limitant pas au code source, graphismes, sons, textes et
+# mécaniques de jeu, sont protégés par les lois européennes et
+# internationales relatives à la propriété intellectuelle.
+# ---------------------------------------------------------------
+# Toute reproduction, distribution, modification ou exploitation
+# partielle ou totale de ce logiciel sans l’autorisation écrite
+# préalable de Byte.Games Studios est strictement interdite et
+# poursuivie conformément au Code de la Propriété Intellectuelle
+# et aux directives de l’Union Européenne en vigueur.
+# ---------------------------------------------------------------
+# Byte.Arcade est une marque déposée de Byte.Games Studios.
+# ---------------------------------------------------------------
+# Crédits :
+# - Développement & conception : Lou.T
+# - Test & optimisation : Byte.Games Studios
+# - Support technique : Byte.Games Studios
+# ---------------------------------------------------------------
+# Toute utilisation commerciale non autorisée est interdite.
+# Toute violation pourra donner lieu à des poursuites civiles et
+# pénales conformément aux lois applicables.
+# ---------------------------------------------------------------
+# Pour signaler un bug,
+# poser une question ou partager vos suggestions,
+# merci de contacter l’équipe Byte.Games Studios à
+# l’adresse suivante : ###.
+# Chaque retour est pris en compte afin de perfectionner
+# Byte.Arcade et offrir la meilleure expérience à tous.
+# ===============================================================
+# Merci d’avoir choisi Byte.Arcade — Un projet Byte.Games Studios
+# ===============================================================

@@ -1,0 +1,20 @@
+Q : Comment lancer un jeu dans Py_Terminal ?
+R : Depuis le menu principal, tapez le numéro correspondant au jeu souhaité puis validez avec Entrée.
+
+Q : Que faire si je me trompe en entrant un nombre ?
+R : Le jeu vous demandera de ressaisir votre réponse tant que la donnée entrée n’est pas valide.
+
+Q : Comment fonctionne le mode multijoueur ?
+R : Vous devez entrer le nombre de joueurs, puis chaque joueur choisit son pseudo et participe à son tour.
+
+Q : Puis-je sauvegarder mes scores ?
+R : Pour le moment, le jeu ne sauvegarde pas automatiquement les scores. Vous pouvez noter vos résultats manuellement.
+
+Q : Comment signaler un bug ou faire une suggestion ?
+R : Envoyez un mail à // lou@tingvall.se // avec une description claire du problème ou de votre idée.
+
+Q : Ce jeu est-il gratuit ?
+R : Oui,  est un projet personnel gratuit, à but éducatif et ludique.
+
+Q : Est-ce que mes données personnelles sont collectées ?
+R : Non, le jeu ne collecte aucune donnée personnelle.

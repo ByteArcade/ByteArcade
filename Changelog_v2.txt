@@ -1,0 +1,140 @@
+# Byte.Arcade – Changelog technique (v1.0 → v7.0)
+
+### Version 1.0 (28/07/2025)
+
+* Création du projet Byte.Arcade.
+* Implémentation du menu principal textuel.
+* Ajout du jeu Juste Prix (mode solo) :
+
+  * Fonction de génération du nombre aléatoire.
+  * Boucle de saisie utilisateur avec gestion des essais.
+  * Affichage des scores et des messages de fin.
+
+### Version 2.0 (29/07/2025)
+
+* Ajout du jeu Roulette Russe (mode solo) :
+
+  * Boucle principale du jeu et logique de tir aléatoire.
+  * Affichage du suspense et notifications de résultat.
+* Intégration du retour au menu principal depuis tous les jeux.
+* Base pour le futur mode multijoueur : structures de données initiales (listes pour les joueurs).
+
+### Version 2.1 (30/07/2025)
+
+* Refactorisation du code pour optimiser la lisibilité.
+* Amélioration de la boucle principale pour permettre l’ajout de nouveaux jeux facilement.
+* Mise en place d’une structure de dictionnaire pour le futur multijoueur :
+
+  ```python
+  joueurs = {"pseudo": "score"}
+  ```
+* Début du développement de Roulette Russe multijoueur.
+
+### Version 3.0 (30/07/2025)
+
+* Implémentation complète de Roulette Russe multijoueur :
+
+  * Boucle de tours alternés pour chaque joueur.
+  * Calcul et affichage du joueur "survivant" ou du perdant.
+
+### Version 3.1 (31/07/2025)
+
+* Ajout de la sélection de pseudo personnalisé pour chaque joueur multijoueur.
+* Refactorisation des entrées pour supporter plusieurs joueurs avec dictionnaire {pseudo: score}.
+
+### Version 3.2 (31/07/2025)
+
+* Intégration d’un copyright provisoire avec informations sur l’auteur (by Lou).
+
+### Version 3.3 (31/07/2025)
+
+* Mise en place du copyright final modifiable avec possibilité d’ajouter un email de contact.
+* Standardisation des informations légales dans le code pour tous les modules.
+
+### Version 3.4 (31/07/2025)
+
+* Ajout d’une FAQ consultable depuis le menu d’aide :
+
+  * Fonction display_faq()
+  * Affichage structuré des questions/réponses.
+
+### Version 3.5 (31/07/2025)
+
+* Ajout du changelog intégré dans le jeu :
+
+  * Fonction display_changelog()
+  * Accès depuis le menu Informations.
+
+### Version 3.6 (31/07/2025)
+
+* Ajout d’une animation d’accueil textuelle.
+* Implémentation d’un système de suspense amélioré pour Roulette Russe :
+
+  * Temporisation avec time.sleep()
+  * Affichage dynamique du tour en cours.
+
+### Version 4.0 (01/07/2025)
+
+* Ajout du jeu Black Jack :
+
+  * Gestion du deck avec liste de cartes.
+  * Distribution aléatoire des cartes aux joueurs.
+  * Boucle principale pour le joueur et l’IA.
+  * Affichage des scores en temps réel.
+* Intégration des règles de jeu consultables via fonction display_rules(jeu).
+
+### Version 4.1 (01/07/2025)
+
+* Finalisation du code Black Jack :
+
+  * Gestion des tours du joueur et de l’IA.
+  * Calcul du gagnant automatiquement.
+  * Mise en place d’un système de notifications.
+
+### Version 4.2 (25/08/2025)
+
+* Optimisation de l’affichage des règles et instructions pour tous les jeux.
+* Refactorisation des fonctions d’affichage (print_rules()) pour standardiser la présentation.
+
+### Version 5.0 (24/09/2025)
+
+* Refonte complète du code :
+
+  * Modularisation en fonctions par jeu.
+  * Introduction de modules séparés pour chaque fonctionnalité (jeu.py, menu.py, utils.py).
+* Optimisation de l’interface textuelle.
+* Révision de la logique des tours pour Roulette Russe et Juste Prix.
+* Black Jack mis temporairement en pause.
+
+### Version 5.1 (24/09/2025)
+
+* Ajout de couleurs dans l’affichage avec colorama ou équivalent.
+* Optimisation de la saisie utilisateur :
+
+  * Fonctions get_input(prompt, type) pour gérer toutes les entrées.
+* Standardisation des messages d’information et de menu.
+
+### Version 6.0
+
+* Mise à jour de la version affichée dans le menu.
+* Ajustements mineurs dans les menus et interfaces.
+* Préparation du code pour intégration future de sauvegardes et comptes joueurs.
+
+### Version 7.0
+
+* Gestion complète des modules importés avec vérification et message d’erreur.
+* Optimisation des fonctions utilitaires :
+
+  * cl() pour clear console
+  * pause() pour temporisation
+* Nouveau menu interactif avec sous-menus :
+
+  * Paramètres
+  * Aide (FAQ + Didacticiel)
+  * Informations (Changelog + Copyright)
+* Jeux principaux conservés et optimisés :
+
+  * Juste Prix : Original, Remake, Multijoueur
+  * Roulette Russe : Solo et Multijoueur
+* Amélioration de l’animation d’accueil et de la barre de chargement.
+* Interface textuelle plus fluide et colorée, avec retour rapide au menu principal.

@@ -1,0 +1,57 @@
+
+- Version original du jeu : 28/07/2025
+
+- Version 2.0 : 29/07/2025
+	Ajout du jeu ROULETTE RUSSE
+	Possibilitée de revenir au menu sans redémarrer le jeu
+
+- Version 2.1 : 30/07/2025
+	Optimisation du code (Plus lisible, moins complexe et modification de la boucle pricipal du jeu)
+	Commencement du code du futur jeu ROULETTE RUSSE MULTIJOUEUR
+
+- Version 3.0 : 30/07/2025
+	Ajout du jeu ROULETTE RUSSE MULTIJOUEUR
+
+- Version 3.1 : 31/07/2025
+	Correction d'un bug dans le jeu ROULETTE RUSSE MULTIJOUEUR [ ligne 323 ]
+	Ajout de la posibilitée de choisir son propre pseudo dans ROULETTE RUSSE MULTIJOUEUR
+
+- Version 3.2 : 31/07/2025
+	Correction d'un bug dans le jeu JUSTE PRIX MULTIJOUEUR
+ 	Ajout du Copyright de Code'n'Play games provisoire
+
+- Version 3.3 : 31/07/2025
+    	Version définitive modifiable du Copyright de Byte.Arcade Games et ajout du contact mail // lou@tingvall.se //
+
+- Version 3.4 : 31/07/2025
+    	Ajout de la FAQ
+
+- Version 3.5 : 31/07/2025
+    	Ajout du changelog dans le jeu
+
+- version 3.6 : 31/07/2025
+    	Nouvelle animation d'accueil
+	Ajout du système de suspense dans le jeu ROULETTE RUSSE
+
+- version 4.0 : 01/07/2025
+	Ajout du jeu BLACK JACK
+	Ajout des règles des jeux en tant que fonction
+
+- version 4.1 : 01/07/2025
+	Ajout de la fin du code de BLACK JACK
+	Correction du bug dans le jeu BLACK JACK {entré = menu jeu != continuer la partie}
+
+- version 4.2 : 25/08/2025
+	Clarification des règle du jeu et amélioration de la compréhension du code source au niveau de l'affichage des règle intra code
+
+- version 5.0 : 24/09/2025
+	Refonte complète du code source
+	Amélioration de l'interface
+	Nouvelle version du jeu ROULETTE RUSSE
+	Jeu BLACK JACK indisponible
+	Encore plus de suspense
+
+- version 5.1 : 
+	Ajouts des couleurs dans l'interface
+	Correction du bug au niveau des erreurs de saisis
+    
