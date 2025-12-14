@@ -32,8 +32,9 @@ except Exception as e:
     op_functions["os"] = False
 try:
     import json
+    import hashlib
 except Exception as e:
-    op_functions["ImportErrorRecap"].append(f"Le mdoule 'json' n'a pas pus être importé : {e}")
+    op_functions["ImportErrorRecap"].append(f"Les mdoules 'json' et 'hashlib' n'ont pas pus être importés : {e}")
     op_functions["json"] = False
 
 def init_modules():
@@ -557,3 +558,48 @@ def menu_principal():
         else:
             print("\n\033[0;41mSaisi invalide, veuillez saisir un nombre entre 1, 2, 3, 4 et 0.\033[0m")
             pause(1.2)
+
+def menu_creation_de_compte():
+    while True:
+        cl()
+        nom_utilisateur = input("Choisissez un nom d'utilisateur : ")
+        if nom_utilisateur.lower() in data:
+            print("Cette utilisateur existe déjà, essayer autre chose.")
+            pause(1.5)
+            continue
+        else:
+            break
+    while True:
+        cl()
+        user_mail = input("Votre adresse mail : ")
+        cl()
+        print(f"Êtes vous sûre que votre adresse mail est bien {user_mail} ?")
+        print("OUI : -1-\t\tRESAISIR : -2-")
+        choix = input("\n\n->")
+        if choix == "1":
+            break
+        else:
+            continue
+    while True:
+        cl()
+        print("Créez un mot de passe :")
+        mdp = input("\n\n->")
+        cl()
+        print("Vérifiez votre mot de passe :")
+        mdp_2 = input("\n\n->")
+        if mdp == mdp_2:
+            break
+        else:
+            continue
+    salt = os.urandom(16)
+    hash_mdp = hashlib.pbkdf2_hmac(
+        "sha256",
+        mdp.encode(),
+        salt,
+        100_000
+    )
+    data[nom_utilisateur] = {}
+    data[nom_utilisateur]["informations"] = {}
+    data[nom_utilisateur]["informations"]["adresse mail"] = user_mail
+    data[nom_utilisateur]["informations"]["mot de passe"] = hash_mdp
+    data[nom_utilisateur]["informations"]["date de création du compte"] = time
