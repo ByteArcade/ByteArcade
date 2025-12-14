@@ -253,5 +253,3 @@ def upload_saves():
 download_saves()
 print(data)
 upload_saves()
-
-print("hello world !")
