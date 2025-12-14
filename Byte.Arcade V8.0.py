@@ -250,4 +250,12 @@ def upload_saves():
     with open("sauvegardes.json", "w") as file:
         json.dump(data, file, indent=4)
 
-        
+def chargement():
+    barres = ["|", "/", "-", "\\"]
+    for _ in range(3):
+        for i in barres:
+            print(barres[i])
+            pause(0.1)
+            cl()
+
+chargement()
