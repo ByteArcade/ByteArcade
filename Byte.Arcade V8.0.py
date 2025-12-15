@@ -1,4 +1,6 @@
 data = {}
+nom_utilisateur = False
+conecte = False
 op_functions = {
     "random": True,
     "time": True,
@@ -33,6 +35,7 @@ except Exception as e:
 try:
     import json
     import hashlib
+    from datetime import datetime
 except Exception as e:
     op_functions["ImportErrorRecap"].append(f"Les mdoules 'json' et 'hashlib' n'ont pas pus être importés : {e}")
     op_functions["json"] = False
@@ -560,9 +563,11 @@ def menu_principal():
             pause(1.2)
 
 def menu_creation_de_compte():
+    global data, nom_utilisateur
+    download_saves()
     while True:
         cl()
-        nom_utilisateur = input("Choisissez un nom d'utilisateur : ")
+        nom_utilisateur = input("Choisissez un nom d'utilisateur : ").lower()
         if nom_utilisateur.lower() in data:
             print("Cette utilisateur existe déjà, essayer autre chose.")
             pause(1.5)
@@ -590,16 +595,54 @@ def menu_creation_de_compte():
         if mdp == mdp_2:
             break
         else:
+            print("Les mots de passe ne correspondent pas, veuillez reessayer.")
+            pause(1.5)
             continue
-    salt = os.urandom(16)
     hash_mdp = hashlib.pbkdf2_hmac(
         "sha256",
         mdp.encode(),
-        salt,
         100_000
     )
+    now = datetime.now()
+    date_de_creation = now.strftime("%d/%m/%Y %H:%M:%S")
     data[nom_utilisateur] = {}
     data[nom_utilisateur]["informations"] = {}
-    data[nom_utilisateur]["informations"]["adresse mail"] = user_mail
-    data[nom_utilisateur]["informations"]["mot de passe"] = hash_mdp
-    data[nom_utilisateur]["informations"]["date de création du compte"] = time
+    data[nom_utilisateur]["informations"]["adresse mail"] = str(user_mail)
+    data[nom_utilisateur]["informations"]["mot de passe"] = str(hash_mdp)
+    data[nom_utilisateur]["informations"]["date de création du compte"] = str(date_de_creation)
+    data[nom_utilisateur]["jeux"] = {}
+    upload_saves()
+
+def connexion():
+    global data, nom_utilisateur, connectee
+    while True:
+        download_saves()
+        while True:
+            cl()
+            nom_utilisateur = input("Nom d'utilisateur : ").lower()
+            if nom_utilisateur in data:
+                break
+            else:
+                print("Nom d'utilisateur inexistant.")
+                pause(1.5)
+                continue
+        while True:
+            cl()
+            mdp = input("Votre mot de passe : ")
+            hash_mdp = hashlib.pbkdf2_hmac(
+                "sha256",
+                mdp.encode(),
+                100_000
+            )
+            if hash_mdp == mdp:
+                connectee = True
+                break
+            else:
+                print("Mot de passe incorrect, veuillez reessayer.")
+                pause(1.5)
+                continue
+        if connectee == True:
+            break
+        else:
+            continue
+
